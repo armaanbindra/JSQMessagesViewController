@@ -139,8 +139,9 @@
     {
         CGContextRef context = UIGraphicsGetCurrentContext();
 
-        UIBezierPath *imgPath = [UIBezierPath bezierPathWithOvalInRect:frame];
-        [imgPath addClip];
+        //REMOVED ROUNDING OF AVATAR IMAGE
+//        UIBezierPath *imgPath = [UIBezierPath bezierPathWithOvalInRect:frame];
+//        [imgPath addClip];
         [image drawInRect:frame];
 
         if (highlightedColor != nil) {
