@@ -38,7 +38,7 @@
                         <rect key="frame" x="40" y="40" width="244" height="94"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2qm-c6-OZf" userLabel="Bubble Image View">
-                                <rect key="frame" x="0.0" y="10" width="244" height="84"/>
+                                <rect key="frame" x="0.0" y="2" width="244" height="92"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLY-aM-0Dr" customClass="JSQMessagesCellTextView">
                                 <rect key="frame" x="0.0" y="0.0" width="238" height="94"/>
@@ -51,7 +51,7 @@
                         <constraints>
                             <constraint firstItem="vLY-aM-0Dr" firstAttribute="leading" secondItem="2zh-vR-QJW" secondAttribute="leading" id="7rI-Nc-AK3"/>
                             <constraint firstAttribute="trailing" secondItem="2qm-c6-OZf" secondAttribute="trailing" id="AEu-1l-tqh"/>
-                            <constraint firstItem="2qm-c6-OZf" firstAttribute="top" secondItem="2zh-vR-QJW" secondAttribute="top" constant="10" id="DbW-Cx-zOW"/>
+                            <constraint firstItem="2qm-c6-OZf" firstAttribute="top" secondItem="2zh-vR-QJW" secondAttribute="top" constant="2" id="DbW-Cx-zOW"/>
                             <constraint firstItem="2qm-c6-OZf" firstAttribute="leading" secondItem="2zh-vR-QJW" secondAttribute="leading" id="H1H-yn-Raq"/>
                             <constraint firstItem="vLY-aM-0Dr" firstAttribute="top" secondItem="2zh-vR-QJW" secondAttribute="top" id="RiG-21-Bqc"/>
                             <constraint firstAttribute="bottom" secondItem="vLY-aM-0Dr" secondAttribute="bottom" id="UbF-Bl-Q7v"/>
