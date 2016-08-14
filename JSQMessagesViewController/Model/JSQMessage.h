@@ -58,6 +58,12 @@
 @property (copy, nonatomic, readonly) NSString *text;
 
 /**
+ *  A Special type to specify the Kind of Emoticon to display on the Avatar Image
+ *
+ */
+@property (nonatomic, readonly) int isType;
+
+/**
  *  Returns the media item attachment of the message, or `nil` if the message is not a media message.
  *  That is, if `isMediaMessage` is equal to `NO` then this value will be `nil`.
  */
