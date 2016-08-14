@@ -30,7 +30,7 @@
     return [[self alloc] initWithSenderId:senderId
                         senderDisplayName:displayName
                                      date:[NSDate date]
-                                     text:text];
+                                     text:text isType:0];
 }
 
 - (instancetype)initWithSenderId:(NSString *)senderId
@@ -55,7 +55,8 @@
     return [[self alloc] initWithSenderId:senderId
                         senderDisplayName:displayName
                                      date:[NSDate date]
-                                    media:media];
+                                    media:media
+                                    isType:0];
 }
 
 - (instancetype)initWithSenderId:(NSString *)senderId
@@ -179,13 +180,15 @@
         return [[[self class] allocWithZone:zone] initWithSenderId:self.senderId
                                                  senderDisplayName:self.senderDisplayName
                                                               date:self.date
-                                                             media:self.media];
+                                                             media:self.media
+                                                            isType:self.isType];
     }
 
     return [[[self class] allocWithZone:zone] initWithSenderId:self.senderId
                                              senderDisplayName:self.senderDisplayName
                                                           date:self.date
-                                                          text:self.text];
+                                                          text:self.text
+                                                        isType:self.isType];
 }
 
 @end
