@@ -29,19 +29,22 @@
 {
     return [[self alloc] initWithSenderId:senderId
                         senderDisplayName:displayName
-                                     date:[NSDate date]
-                                     text:text isType:0];
+                                        date:[NSDate date]
+                                        text:text
+                                        userId:@""
+                                        isType:0];
 }
 
 - (instancetype)initWithSenderId:(NSString *)senderId
                senderDisplayName:(NSString *)senderDisplayName
                             date:(NSDate *)date
                             text:(NSString *)text
+                          userId:(NSString *)userId
                            isType:(int)isType
 {
     NSParameterAssert(text != nil);
 
-    self = [self initWithSenderId:senderId senderDisplayName:senderDisplayName date:date isMedia:NO isType:isType];
+    self = [self initWithSenderId:senderId senderDisplayName:senderDisplayName date:date isMedia:NO userId:userId isType:isType];
     if (self) {
         _text = [text copy];
     }
@@ -56,6 +59,7 @@
                         senderDisplayName:displayName
                                      date:[NSDate date]
                                     media:media
+                                   userId:@""
                                     isType:0];
 }
 
@@ -63,11 +67,12 @@
                senderDisplayName:(NSString *)senderDisplayName
                             date:(NSDate *)date
                            media:(id<JSQMessageMediaData>)media
+                          userId:(NSString *)userId
                           isType:(int)isType
 {
     NSParameterAssert(media != nil);
 
-    self = [self initWithSenderId:senderId senderDisplayName:senderDisplayName date:date isMedia:YES isType: isType];
+    self = [self initWithSenderId:senderId senderDisplayName:senderDisplayName date:date isMedia:YES userId: userId isType: isType];
     if (self) {
         _media = media;
     }
@@ -78,6 +83,7 @@
                senderDisplayName:(NSString *)senderDisplayName
                             date:(NSDate *)date
                          isMedia:(BOOL)isMedia
+                          userId:(NSString *)userId
                           isType:(int)isType
 {
     NSParameterAssert(senderId != nil);
@@ -181,6 +187,7 @@
                                                  senderDisplayName:self.senderDisplayName
                                                               date:self.date
                                                              media:self.media
+                                                            userId:self.userId
                                                             isType:self.isType];
     }
 
@@ -188,6 +195,7 @@
                                              senderDisplayName:self.senderDisplayName
                                                           date:self.date
                                                           text:self.text
+                                                        userId:self.userId
                                                         isType:self.isType];
 }
 

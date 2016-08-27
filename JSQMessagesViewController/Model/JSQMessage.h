@@ -58,6 +58,12 @@
 @property (copy, nonatomic, readonly) NSString *text;
 
 /**
+ *  Special UserId that links the user to the database
+ */
+@property (copy, nonatomic, readonly) NSString *userId;
+
+
+/**
  *  A Special type to specify the Kind of Emoticon to display on the Avatar Image
  *
  */
@@ -104,6 +110,7 @@
                senderDisplayName:(NSString *)senderDisplayName
                             date:(NSDate *)date
                             text:(NSString *)text
+                          userId:(NSString *)userId
                             isType:(int)isType;
 /**
  *  Initializes and returns a message object having the given senderId, displayName, media,
@@ -137,6 +144,7 @@
                senderDisplayName:(NSString *)senderDisplayName
                             date:(NSDate *)date
                            media:(id<JSQMessageMediaData>)media
+                          userId:(NSString *)userId
                             isType:(int)isType;
 
 /**
