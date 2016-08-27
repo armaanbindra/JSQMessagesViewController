@@ -96,6 +96,7 @@
         _senderDisplayName = [senderDisplayName copy];
         _date = [date copy];
         _isMediaMessage = isMedia;
+        _userId = userId;
         _isType = isType;
     }
     return self;
